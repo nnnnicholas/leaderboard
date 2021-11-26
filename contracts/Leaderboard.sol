@@ -32,11 +32,11 @@ contract Leaderboard is Ownable, ReentrancyGuard{
         return attention[focus];
     }
 
-    function withdraw() external payable onlyOwner {
+    function withdraw() external onlyOwner {
         uint256 balance = address(this).balance;
         require(balance > 0, "Contract contains no ETH");
-        address payable owner = payable(owner());
-        (bool success, ) = owner.call{value: msg.value}("");
+        address owner = owner();
+        (bool success, ) = owner.call{value: balance}("");
         require(success, "Failed to send Ether");
     }
 
