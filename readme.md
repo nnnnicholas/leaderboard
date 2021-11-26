@@ -15,12 +15,12 @@ Example scenario:
 - ilemi calls `retrieveAttention(address contract)` and confirms that this address *has* received 1 ETH worth of attention. As the owner, he may `withdraw()` the contract's balance to his wallet, or he may `withdrawTo(address to, uint amount)` a portion of the contract's balance to any address.
 
 ## Extra features
-- Owner may `resetAttention(address contract)` 
-- Owner may pause `payAttention()`
+- Owner may `resetAttention(address contract)` which sets that contract's attention counter to 0.
+- Owner may pause `payAttention()` so that no one may pay attention to any address.
 - Anyone can call `totalAttention()` to see total attention paid (ETH).
 
 ## Deploy instructions
 Copy paste the contract into remix and hit deploy lol.
 
 ## Author
-[@nnnnicholas](https://twitter.com/nnnnicholas)
+[@nnnnicholas](https://twitter.com/nnnnicholas) | nnnnicholas.eth
