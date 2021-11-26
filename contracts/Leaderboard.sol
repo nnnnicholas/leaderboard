@@ -7,29 +7,30 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 /**
  * @title Leaderboard
+ * @author @nnnnicholas
  * @dev Receive ETH and associate contributions with contract addresses.
  */
 contract Leaderboard is Ownable, ReentrancyGuard{
     mapping(address => uint256) attention;
 
-    event attentionDrawnTo(address focus, uint256 amount);
+    event attentionDrawnTo(address _contract, uint256 amount);
     event attentionReset(address _contract);
 
     /**
      * @dev Store cumulative value in attention mapping
-     * @param focus to pay attention to
+     * @param _contract to pay attention to
      */
-    function payAttention(address focus) external payable nonReentrant{
-        attention[focus] += msg.value;
-        emit attentionDrawnTo(focus, msg.value);
+    function payAttention(address _contract) external payable nonReentrant{
+        attention[_contract] += msg.value;
+        emit attentionDrawnTo(_contract, msg.value);
     }
 
     /**
      * @dev Retrieve attention paid to a given address
      * @return attention measured in wei
      */
-    function retrieve(address focus) external view returns (uint256) {
-        return attention[focus];
+    function retrieveAttention(address _contract) external view returns (uint256) {
+        return attention[_contract];
     }
 
     function withdraw() external onlyOwner {
