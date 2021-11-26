@@ -11,7 +11,7 @@ Leaderboard allows EVM wallets to *draw attention* to a given address.
 Example scenario:
 
 - ilemi deploys a Leaderboard to Ethereum Mainnet. He is the contract owner. He announces that he will do a Dune Dash and Twitter thread about any address that receives 1 ETH of attention.
-- I, an enthusiast of a certain NFT collection or DAO, call `payAttention(address contract)` and send 0.1 ETH in the same transaction. I encourage nine of my closest friends to do the same. I ping ilemi on twitter when it is done with the contract address I want him to look into.
+- I, an enthusiast of a certain NFT collection or DAO, call `payAttention(address contract)` and send 0.1 ETH in the same transaction. I encourage nine of my closest friends to do the same. I ping ilemi on twitter when it is done and mention the contract address I want him to look into.
 - ilemi calls `retrieveAttention(address contract)` and confirms that this address *has* received 1 ETH worth of attention. As the owner, he may `withdraw()` the contract's balance to his wallet, or he may `withdrawTo(address to, uint amount)` a portion of the contract's balance to any address.
 
 ## Extra features
