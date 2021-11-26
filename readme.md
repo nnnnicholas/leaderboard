@@ -20,7 +20,7 @@ Example scenario:
 - Anyone can call `totalAttention()` to see total attention paid (ETH).
 
 ## Deploy instructions
-copy paste the contract into remix and hit deploy lol
+Copy paste the contract into remix and hit deploy lol.
 
 ## Author
 [@nnnnicholas](https://twitter.com/nnnnicholas)
