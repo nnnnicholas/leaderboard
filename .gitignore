@@ -1,0 +1,5 @@
+node_modules/
+.env
+mnemonic.txt
+.mnemonic.txt
+.pnpm-debug.log
