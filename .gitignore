@@ -3,3 +3,4 @@ node_modules/
 mnemonic.txt
 .mnemonic.txt
 .pnpm-debug.log
+cache/
