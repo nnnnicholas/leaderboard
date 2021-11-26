@@ -23,7 +23,7 @@ contract Leaderboard is Ownable, ReentrancyGuard, Pausable{
      * @dev Store cumulative value in attention mapping
      * @param _contract to pay attention to
      */
-    function payAttention(address _contract) external payable nonReentrant whenNotPaused{
+    function payAttention(address _contract) external payable nonReentrant whenNotPaused(){
         attention[_contract] += msg.value;
         totalAttention += msg.value;
         emit attentionDrawnTo(_contract, msg.value);
@@ -58,6 +58,14 @@ contract Leaderboard is Ownable, ReentrancyGuard, Pausable{
         attention[_contract] = 0;
         emit attentionReset(_contract);
 
+    }
+
+    function pause() external onlyOwner{
+        _pause();
+    }
+
+    function unpause() external onlyOwner{
+        _unpause();
     }
 
     receive() external payable {}
