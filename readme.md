@@ -22,3 +22,5 @@ Example scenario:
 ## Deploy instructions
 copy paste the contract into remix and hit deploy lol
 
+## Author
+[@nnnnicholas](https://twitter.com/nnnnicholas)
