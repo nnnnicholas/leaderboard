@@ -4,3 +4,4 @@ mnemonic.txt
 .mnemonic.txt
 .pnpm-debug.log
 cache/
+artifacts/
