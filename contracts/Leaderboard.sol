@@ -45,7 +45,7 @@ contract Leaderboard is Ownable, ReentrancyGuard, Pausable{
         require(success, "Failed to send Ether");
     }
 
-    function withdrawTo(address payable _to, uint256 _amount) public nonReentrant {
+    function withdrawTo(address payable _to, uint256 _amount) public onlyOwner nonReentrant {
         (bool success, ) = _to.call{value: _amount}("");
         require(success, "Failed to send Ether");
     }
