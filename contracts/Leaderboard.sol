@@ -60,15 +60,15 @@ contract Leaderboard is Ownable, ReentrancyGuard, Pausable{
 
     }
 
-    function pause() external onlyOwner{
+    function pause() external onlyOwner nonReentrant{
         _pause();
     }
 
-    function unpause() external onlyOwner{
+    function unpause() external onlyOwner nonReentrant{
         _unpause();
     }
 
-    receive() external payable {}
+    receive() external payable nonReentrant {}
 
-    fallback() external payable {}
+    fallback() external payable nonReentrant {}
 }
