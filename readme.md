@@ -1,8 +1,8 @@
-# Bounties 
+# Leaderboard 
 
-Permissionless bounties for content creators. This contract lets you collect donations pointing at user defined strings. 
+Allow any address on the blockchain to monetize their attention.
 
-<!-- ## Mechanism
+## Mechanism
 Leaderboard allows EVM wallets to *draw attention* to a given address. 
 
 Example scenario:
@@ -24,6 +24,6 @@ Rinkeby https://rinkeby.etherscan.io/address/0x0e3971a3C3c0c30db63597059A47D66d3
 
 ## Origins story
 [ilemi.eth](https://twitter.com/andrewhong5297)'s Dune Analytics dashboards and Twitter threads came to my attention in November 2021 in the wake of ConstitutionDAO, for which he created [an excellent dash](https://dune.xyz/ilemi/ConstitutionDAO-Funding-Tracker). It occurred to me that ilemi could charge people for the quantitative analysis he provides. Leaderboard is the system I created to help people like ilemi permissionlessly monetize their attention.
--->
+
 ## Author
-[@nnnnicholas](https://twitter.com/nnnnicholas) | nnnnicholas.eth 
+[@nnnnicholas](https://twitter.com/nnnnicholas) | nnnnicholas.eth
